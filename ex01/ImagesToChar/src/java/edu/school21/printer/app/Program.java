@@ -16,6 +16,8 @@ public class Program {
         } else {
             errorMessage("Incorrect number of input arguments");
         }
-        Logic.inputBmp(args);
+
+        Logic logic = new Logic();
+        logic.inputBmp(args);
     }
 }

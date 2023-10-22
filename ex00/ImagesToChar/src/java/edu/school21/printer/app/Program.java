@@ -1,7 +1,6 @@
 package edu.school21.printer.app;
 
 import edu.school21.printer.logic.Logic;
-
 import java.io.File;
 
 public class Program {
@@ -25,6 +24,8 @@ public class Program {
         } else {
             errorMessage("Incorrect number of input arguments");
         }
-        Logic.inputBmp(args);
+
+        Logic logic = new Logic();
+        logic.inputBmp(args);
     }
 }

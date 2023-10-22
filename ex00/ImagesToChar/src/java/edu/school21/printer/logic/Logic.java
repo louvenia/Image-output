@@ -5,9 +5,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 public class Logic {
-    private static byte[] contentsArr;
+    private byte[] contentsArr;
 
-    private static void replaceChar(String characterA, String characterB) {
+    private void replaceChar(String characterA, String characterB) {
         byte[] chByteA, chByteB;
         chByteA = characterA.getBytes();
         chByteB = characterB.getBytes();
@@ -20,7 +20,7 @@ public class Logic {
         }
     }
 
-    private static void printBMP(String[] args) {
+    private void printBMP(String[] args) {
         replaceChar(args[0], args[1]);
         for(int i = 0; i < contentsArr.length; i++) {
             if(i % 16 == 0) {
@@ -30,7 +30,7 @@ public class Logic {
         }
     }
 
-    public static void inputBmp(String[] args) {
+    public void inputBmp(String[] args) {
         try {
             File f = new File(args[2]);
             BufferedImage image = ImageIO.read(f);

@@ -15,7 +15,9 @@ public class Program {
                     .addObject(arguments)
                     .build()
                     .parse(args);
-            Logic.inputBmp(white, black);
+
+            Logic logic = new Logic();
+            logic.inputBmp(white, black);
         } catch (Exception error) {
             System.out.println();
             System.err.println(error.getMessage());

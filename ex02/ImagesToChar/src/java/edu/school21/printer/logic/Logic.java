@@ -8,9 +8,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 public class Logic {
-    private static byte[] contentsArr;
+    private byte[] contentsArr;
 
-    private static void printBMP(String white, String black) {
+    private void printBMP(String white, String black) {
         ColoredPrinter color = new ColoredPrinter();
         for(int i = 0; i < contentsArr.length; i++) {
             if(i % 16 == 0) {
@@ -24,7 +24,7 @@ public class Logic {
         }
     }
 
-    public static void inputBmp(String white, String black) {
+    public void inputBmp(String white, String black) {
         try {
             File f = new File("src/resources/image.bmp");
             BufferedImage image = ImageIO.read(f);
